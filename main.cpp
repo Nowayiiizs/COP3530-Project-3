@@ -8,8 +8,8 @@
 
 #include <chrono>
 
-#include "HashTable.h"
-#include "RBTree.h"
+#include "src/HashTable.h"
+#include "src/RBTree.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -86,7 +86,7 @@ int getUserChoice() {
  */
 void buildDataStructures(HashTable &ht, RBTree &rbt, bool buildHashTable, bool buildRBTree,
                          long long &buildTimeHT, long long &buildTimeRBT) {
-    ifstream file("USDiseases.csv");
+    ifstream file("data/USDiseases.csv");
     string line;
     if (!file.is_open()) {
         cout << "Can't open file" << endl;
